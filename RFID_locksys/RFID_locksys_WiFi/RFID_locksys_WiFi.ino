@@ -11,8 +11,8 @@
 #define WIFI_SSID "THINK AGAIN LAB_EXT"
 #define WIFI_PASSWORD "Tal@12345"
 
-#define GOOGLE_SHEET_ID "1c3oEHJ8Joe6YCKIdzu3GOpNiESiDPDKa9RR90Ts1ZDs"
-#define ACCESS_TOKEN "AIzaSyCZa7nuUoSW-rFrFCIFc6uFwWPR98xSANM"
+#define GOOGLE_SHEET_ID "Spreadsheet id"
+#define ACCESS_TOKEN "Access Token here"
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 WiFiClientSecure client;
