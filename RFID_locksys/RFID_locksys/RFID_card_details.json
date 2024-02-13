@@ -1,0 +1,44 @@
+function checkAccess() {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var uid = e.parameter.uid;
+  
+    var authorizationResult = authorizeAndGetInfo(uid);
+  
+    // Separate authorization status and name
+    var parts = authorizationResult.split('|');
+    var authorized = parts[0] === 'true';
+    var name = authorized ? parts[1] : '';
+  
+    if (authorized) {
+      var dateTime = new Date().toLocaleString();
+      storeAccessDetails(name, uid, dateTime);
+    }
+  
+    return ContentService.createTextOutput(authorizationResult);
+  }
+  
+  function authorizeAndGetInfo(uid) {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var range = sheet.getRange("A2:B1001");  // Assuming your data is in columns A and B, from A2 to B1001
+    var values = range.getValues();
+  
+    for (var i = 0; i < values.length; i++) {
+      if (values[i][0] == uid) {
+        var name = values[i][1];  // Get the name from column B
+        Logger.log("Access granted. Name: " + name);
+        return "true|" + name;  // Return 'true' and name if authorized
+      }
+    }
+  
+    Logger.log("Access denied. UID not authorized.");
+    return "false";  // Return 'false' if UID not authorized
+  }
+  
+  function storeAccessDetails(name, uid, dateTime) {
+    var targetSheet = SpreadsheetApp.openById('174E_Aa9DUQ7r1bRsAZlE8v69IA9POOuc3rzgSdgoJMM').getActiveSheet();
+    var newRow = [dateTime, name, uid];
+    targetSheet.appendRow(newRow);
+  }
+  
+  // Add any additional helper functions as needed
+  
