@@ -1,6 +1,4 @@
-Certainly! Here's a brief summary of the functionality and context of the provided Arduino code for a README.txt file on GitHub:
-
----
+---This code and file is edited and reviewed by Rohit Paul---
 
 ### RFID Access Control System
 
