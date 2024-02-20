@@ -233,7 +233,7 @@ void checkifAuthorised() {
         // Check if the response contains 'true' (data present in Google Sheets)
 
       }
-      //-----------------------------------------------------------------
+      //------------------------------------------------------------------
       else
       {
         Serial.printf("[HTTPS] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
