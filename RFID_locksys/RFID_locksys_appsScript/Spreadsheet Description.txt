@@ -1,0 +1,14 @@
+For storing the Names with time and date create a spreadsheet in which
+A1 -> Date
+B1 -> Time
+C1 -> Name
+
+
+in 2nd spread sheet just create name or cardId in 1st column
+A1 -> Name/CardID
+
+Note: I have taken only range of A2 to A100. You can increase according to your needs just change
+that part in appsScript of Card_authentication.
+
+And provide the Sheet Id(see Youtube for further details) and Sheet Name ( like "Sheet1" which is present in lower left of google sheet)
+
