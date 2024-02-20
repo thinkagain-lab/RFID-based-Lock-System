@@ -6,27 +6,30 @@
 This Arduino sketch enables the implementation of a simple RFID-based access control system using an MFRC522 RFID reader module. The system grants access to authorized individuals based on the unique identifier (UID) stored on RFID cards.
 
 #### Components Required:
-- Arduino board (e.g., Arduino Uno)
+- esp32 or esp8266 board (e.g., NodeMCU 0.9)
 - MFRC522 RFID Reader Module
 - Relay Module
 - Buzzer
+- 12V solenoid lock
 
 #### Functionality:
-1. The system waits for a RFID card to be presented to the reader.
+1. The system waits for an RFID card to be presented to the reader.
 2. Upon detecting a card, it reads its UID and compares it against a predefined list of authorized card UIDs.
 3. If the UID matches an authorized card, access is granted:
    - The relay is activated to control an electronic lock.
    - Access is allowed for a specified duration (ACCESS_DELAY).
+   - Data is sent to a Google Sheet.
+   - A buzzer beeps to indicate successful access.
 4. If the UID does not match any authorized card, access is denied:
-   - A buzzer sounds as an indication of denied access.
+   - A buzzer sounds a long beep as an indication of denied access.
    - Access denial duration is set by DENIED_DELAY.
-5. The system loops back to wait for the next card presentation.
 
 #### Wiring:
 - MFRC522 SS_PIN to Arduino D4
 - MFRC522 RST_PIN to Arduino D3
 - Relay Module control pin (RELAY) to Arduino D0
 - Buzzer pin to Arduino D1
+Please refer to circuit diagram image provide in the repository
 
 #### Instructions:
 1. Upload the sketch to your Arduino board.
@@ -35,10 +38,11 @@ This Arduino sketch enables the implementation of a simple RFID-based access con
 4. Test the system with authorized and unauthorized RFID cards.
 
 #### Note:
-- Make sure to include the necessary libraries (SPI.h and MFRC522.h) in your Arduino IDE.
+- Ensure to include the necessary libraries (SPI.h, MFRC522.h, Arduino.h, ESP8266WiFi.h, ESP8266HTTPClient.h, WiFiClient.h, WiFiClientSecureBearSSL.h) in your Arduino IDE.
 - Modify the ACCESS_DELAY and DENIED_DELAY variables according to your requirements for access duration and denial indication duration.
 - This code is provided as a starting point for RFID-based access control projects and can be extended or modified based on specific project needs.
 
---- 
+---
+
 
 This README provides a concise overview of the code's purpose, functionality, required components, wiring instructions, usage guidelines, and notes for further customization or extension.
