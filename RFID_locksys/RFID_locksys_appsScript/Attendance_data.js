@@ -7,9 +7,6 @@ var timeZone = "Asia/Kolkata"; // change according your timezone
 //console.log(currentTime);
 
 
-
-
-//MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 function doGet(e){
   Logger.log( JSON.stringify(e) );
   //----------------------------------------------------------------------------------
@@ -37,12 +34,10 @@ function doGet(e){
 }
 
 
-//MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 function stripQuotes( value ) {
   return value.toString().replace(/^["']|['"]$/g, "");
 }
 
-//MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 //Extra Function. Not used in this project.
 //planning to use in future projects.
 //this function is used to handle POST request

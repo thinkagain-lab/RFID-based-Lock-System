@@ -27,12 +27,13 @@ byte readBlockData[18];
 String response;
 String card_holder_name;
 String card_holder_name_auth;
-const String sheet_url_send = "https://script.google.com/macros/s/AKfycbym2CoJVgJ1kB8195Gd2F3yUFmPgMQMxLRLMtZza47oldXJ7OdHv7YVoEvUu3weqkjr/exec?name=";//add ?name= at last of the url
-const String sheet_url_auth = "https://script.google.com/macros/s/AKfycbzJcZn5bFNTLIueeTTVihalRiii8fpfu4LFRebg_IzTzpOIsPoZgM9gyWcibozYEHqERA/exec?cardId=";//add ?cardId= at last of the url
+const String sheet_url_send = "your_web_app_url?name=";//add ?name= at last of the url
+const String sheet_url_auth = "your_web_app_url?cardId=";//add ?cardId= at last of the url
+//this two urls should be different as we are using different sheets accessing and writing data
 //-----------------------------------------
 
-#define WIFI_SSID "THINK AGAIN LAB_EXT"
-#define WIFI_PASSWORD "Tal@12345"
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "WIFI_PASSWORD"
 //-----------------------------------------
 
 

@@ -8,8 +8,8 @@
 #define SS_PIN      D4     // Configurable, see typical pin layout above
 #define RELAY_PIN   D0     // Pin connected to the relay
 
-#define WIFI_SSID "THINK AGAIN LAB_EXT"
-#define WIFI_PASSWORD "Tal@12345"
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "WIFI_PASSWORD"
 
 #define GOOGLE_SHEET_ID "Spreadsheet id"
 #define ACCESS_TOKEN "Access Token here"
