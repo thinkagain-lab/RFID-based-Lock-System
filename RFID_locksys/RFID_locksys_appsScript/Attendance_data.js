@@ -9,7 +9,7 @@ var timeZone = "Asia/Kolkata"; // change according your timezone
 
 function doGet(e){
   Logger.log( JSON.stringify(e) );
-  //----------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------
   //write_google_sheet() function in esp32 sketch, is send data to this code block
   //----------------------------------------------------------------------------------
   //get gps data from ESP32

@@ -1,6 +1,6 @@
 var ss = SpreadsheetApp.openById('SpreadsheetID');
 var sheet = ss.getSheetByName('Sheet1');
-
+//   Get the last row with data in column A (assuming your data starts in A2)
 function authenticateCard(cardId) {
   var dataRange = sheet.getRange('A2:A100'); // Assuming card IDs are stored in column A
   var values = dataRange.getValues();
@@ -17,7 +17,9 @@ function authenticateCard(cardId) {
   }
   
 }
+//   This is the function that will be called when a door opens or closes. It checks whether to allow access based on the card ID.
 
+// This function is called by the client-side code, not by Google Apps Script
 function doGet(e) {
   Logger.log( JSON.stringify(e) );
   if (e.parameter == 'undefined') {
@@ -28,6 +30,7 @@ function doGet(e) {
   var result = authenticateCard(cardId);
   return ContentService.createTextOutput(result);
 }
+//   Strip quotes from the parameter value, if any
 function stripQuotes( value ) {
   return value.toString().replace(/^["']|['"]$/g, "");
 }
