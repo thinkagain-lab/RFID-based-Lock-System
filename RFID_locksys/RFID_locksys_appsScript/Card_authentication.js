@@ -1,3 +1,10 @@
+/*
+ * Copyright 2024 Rohit Paul and Think Again Lab
+ *
+ * Licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ */
+
 var ss = SpreadsheetApp.openById('SpreadsheetID');
 var sheet = ss.getSheetByName('Sheet1');
 //   Get the last row with data in column A (assuming your data starts in A2)

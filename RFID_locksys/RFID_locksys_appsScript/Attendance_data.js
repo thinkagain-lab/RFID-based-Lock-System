@@ -1,3 +1,9 @@
+/*
+ * Copyright 2024 Rohit Paul
+ *
+ * Licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ */
 
 
 var ss = SpreadsheetApp.openById('SpreadsheetId');
